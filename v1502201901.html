@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أحمد هريدي</title>
+    <meta name="description" content="من حديث الكاتب الصحفي أحمد هريدي في برنامج مع مصطفى بكري، حلقة الجمعة 15 أبريل 2019 على شاشة تلفزيون فلسطين.">
+    <meta name="keywords" content="أحمد هريدي, مصطفى بكري, تلفزيون فلسطين, مقابلة, فيديو, برنامج, كاتب صحفي">
+    <style>
+        /* التنسيقات العامة */
+        body {
+            font-family: 'Arial', sans-serif;
+            direction: rtl; 
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .video-wrapper {
+            margin-bottom: 20px; 
+        }
+        .main-video {
+            /* العرض 100% ليطابق عرض الجدول */
+            max-width: 100%; 
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        /* تنسيقات الجدول (البيانات أسفل الفيديو) */
+        .video-details-table {
+            width: 100%; /* مساوٍ للمساحة العرضية للفيديو */
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            /* توسيط النص داخل الجدول */
+            text-align: center; 
+            font-size: 1.1em;
+        }
+
+        .video-details-table td {
+            padding: 12px 10px; 
+            border: 1px solid #ccc;
+            line-height: 1.6; 
+        }
+        
+        /* تنسيق السطر الأول (الخط العريض واللون الفاتح) */
+        .video-details-table tr:first-child {
+            background-color: #e9e9e9; 
+            color: #333;
+            font-weight: bold; /* خط عريض */
+            font-size: 1.1em;
+        }
+
+        /* تنسيق السطر الثاني (الخط العادي والبنط الأقل واللون الأزرق الفاتح) */
+        .video-details-table tr:last-child {
+            background-color: #d1e7f0; 
+            color: #000;
+            font-weight: normal; /* خط عادي */
+            font-size: 0.95em; /* بنط أقل */
+        }
+        /* نهاية تنسيقات الجدول */
+
+        /* الخط الفاصل */
+        .separator {
+            border: none;
+            height: 1px;
+            background-color: #ccc;
+            margin: 15px 0;
+        }
+        /* رسالة تحت التحديث */
+        .footer-text {
+            font-size: 1.3em; 
+            color: #777;
+            margin-top: 20px;
+            padding-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="video-wrapper">
+            <video controls preload="metadata" class="main-video" poster="VID1502201901.jpg">
+                <source src="VID1502201901.mp4" type="video/mp4">
+                متصفحك لا يدعم وسم الفيديو.
+            </video>
+        </div>
+
+        <table class="video-details-table">
+            <tr>
+                <td>
+                    أولاد البطة السوداء في التنظيم الإخواني<br>
+                    من حلقة الجمعة 15 أبريل 2019 في برنامج "مع مصطفى بكري"<br>
+                    على شاشة تلفزيون فلسطين .. ضيف الحلقة الكاتب الصحفي أحمد هريدي
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    البرنامج كان يقدمه الكاتب الصحفي والإعلامي مصطفى بكري<br>
+                 على شاشة تلفزيون فلسطين في عام 2019
+                </td>
+            </tr>
+        </table>
+        <hr class="separator">
+
+        <p class="footer-text">الموقع تحت التحديث</p>
+    </div>
+</body>
+</html>
