@@ -1,76 +1,149 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الكاتب الصحفي أحمد هريدي</title>
-    <meta name="description" content="الموقع الرسمي للكاتب الصحفي أحمد هريدي، ، عضو نقابة الصحفيين المصريين، وعضو اتحاد الصحفيين العرب. الموقع تحت التحديث.">
-    <meta name="keywords" content="أحمد هريدي, كاتب صحفي, جريدة الأسبوع, عضو نقابة الصحفيين المصريين, عضو اتحاد الصحفيين العرب,">
+    <title>الموقع الرسمي للكاتب الصحفي أحمد هريدي</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aharidy.online">
+    <meta property="og:title" content="الموقع الرسمي للكاتب الصحفي أحمد هريدي">
+    <meta property="og:description" content="الكاتب الصحفي بجريدة الأسبوع، عضو نقابة الصحفيين المصريين واتحاد الصحفيين العرب.">
+    <meta property="og:image" content="https://aharidy.online/Ahmedharidy.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
-        /* التنسيقات العامة */
+        /* الخلفية الخارجية للموقع بالكامل (كحلي داكن صريح) */
         body {
-            font-family: 'Arial', sans-serif;
-            direction: rtl; 
-            text-align: center;
+            font-family: 'Cairo', sans-serif;
+            background-color: #001a33; 
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            padding: 20px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
+
+        /* الكتلة الداخلية بلون رمادي فاتح متميز وواضح */
         .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 750px;
+            width: 100%;
+            background-color: #eef2f7; /* لون رمادي فاتح صريح يظهر بوضوح فوق الكحلي */
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+            border: 2px solid #002b5b; /* إطار كحلي رفيع لتحديد الكتلة */
         }
-        .image-wrapper {
-            margin-bottom: 5px; 
+
+        .header-banner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #cbd5e0; /* فاصل واضح تحت الهيدر */
+            padding-bottom: 25px;
         }
-        .main-image {
-            max-width: 100%;
+
+        .personal-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #002b5b;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            flex-shrink: 0;
+        }
+
+        .text-group { text-align: right; }
+
+        .site-label {
+            display: block;
+            font-size: 1.1em;
+            color: #d32f2f; /* أحمر داكن للعنوان التمهيدي */
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .main-name {
+            font-family: 'Amiri', serif;
+            font-size: clamp(1.6em, 5vw, 2.3em);
+            color: #002b5b;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .topic-image {
+            max-width: 70%;
             height: auto;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            border-radius: 12px;
+            margin: 25px auto;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 4px solid #ffffff; /* إطار أبيض يبرز الصورة فوق الخلفية الرمادية */
         }
-        /* الخط الفاصل */
-        .separator {
+
+        .bio {
+            text-align: center;
+            font-size: 1.35em;
+            color: #1a202c;
+            line-height: 1.8;
+            margin: 30px 0;
+        }
+
+        .bio p { margin: 10px 0; font-weight: 700; }
+
+        .hr-line {
+            width: 50%;
+            height: 2px;
+            background-color: #cbd5e0;
             border: none;
-            height: 1px;
-            background-color: #ccc;
-            margin: 15px 0;
+            margin: 25px auto;
         }
-        /* رسالة تحت التحديث */
-        .footer-text {
-            font-size: 1.3em; 
-            color: #777;
-            margin-top: 20px;
-            padding-top: 10px;
+
+        .status-msg {
+            text-align: center;
+            font-size: 1em;
+            color: #718096; /* رمادي متوسط */
             font-weight: bold;
+        }
+
+        @media (max-width: 550px) {
+            .header-banner { flex-direction: column; text-align: center; gap: 15px; }
+            .text-group { text-align: center; }
+            .topic-image { max-width: 100%; }
+            .container { padding: 30px 20px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="image-wrapper">
-        <div style="color: #0056b3; font-size: 1.8em; margin-top: 15px; margin-bottom: 5px; font-weight: bold;">
-            الموقع الرسمي للكاتب الصحفي أحمد هريدي
-        </div>
-            <img src="images/image001.jpg" alt="" class="main-image">
-        </div>
 
+    <main class="container">
+        <header class="header-banner">
+            <img src="Ahmedharidy.jpg" alt="الكاتب الصحفي أحمد هريدي" class="personal-img">
+            <div class="text-group">
+                <span class="site-label">الموقع الرسمي</span>
+                <h1 class="main-name">للكاتب الصحفي أحمد هريدي</h1>
+            </div>
+        </header>
 
+        <article>
+            <img src="image001.jpg" alt="أحمد هريدي بجريدة الأسبوع" class="topic-image">
+            
+            <div class="bio">
+                <p>كاتب صحفي بجريدة الأسبوع</p>
+                <p>عضو نقابة الصحفيين المصريين واتحاد الصحفيين العرب</p>
+            </div>
+        </article>
 
-      <div style="color: #000; font-size: 1.2em; margin-bottom: 25px; line-height: 1.8; font-weight: bold;">
-    <p style="margin: 5px 0;">كاتب صحفي في جريدة الأسبوع</p>
-    <p style="margin: 5px 0;">عضو نقابة الصحفيين المصريين</p>
-    <p style="margin: 5px 0;">عضو اتحاد الصحفيين العرب</p>
-        </div>
-        
-        <hr class="separator">
-        
-        <p class="footer-text">الموقع تحت التحديث</p>
-    </div>
+        <hr class="hr-line">
+
+        <footer>
+            <p class="status-msg">الموقع تحت التحديث</p>
+        </footer>
+    </main>
+
 </body>
 </html>
