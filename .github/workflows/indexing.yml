@@ -2,15 +2,13 @@ name: Global Instant Indexing 2026
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:  # هذا السطر سيسمح لك بتشغيل الكود يدوياً للتجربة
+  workflow_dispatch:
 
 jobs:
   index-push:
     runs-on: ubuntu-latest
     steps:
-      - name: Notify IndexNow
+      - name: Notify Search Engines
         run: |
           curl -X GET "https://www.bing.com/indexnow?url=https://aharidy.online&key=6e467fc404384d558a94816abdfc63ec"
-      - name: Ping Google
-        run: |
           curl -X GET "https://www.google.com/ping?sitemap=https://aharidy.online/sitemap.xml"
