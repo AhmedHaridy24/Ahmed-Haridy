@@ -1,14 +1,14 @@
 name: Global Instant Indexing 2026
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
-  index-push:
+  indexing_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Notify Search Engines
-        run: |
-          curl -X GET "https://www.bing.com/indexnow?url=https://aharidy.online&key=6e467fc404384d558a94816abdfc63ec"
-          curl -X GET "https://www.google.com/ping?sitemap=https://aharidy.online/sitemap.xml"
+      - name: Send IndexNow Request
+        run: curl -v "https://www.bing.com/indexnow?url=https://aharidy.online&key=4900d5b535d24f65976b8462e690b19b"
+      - name: Ping Google
+        run: curl -v "https://www.google.com/ping?sitemap=https://aharidy.online/sitemap.xml"
