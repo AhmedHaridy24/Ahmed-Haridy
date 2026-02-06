@@ -28,5 +28,33 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <url>
+    <loc>https://aharidy.online/aharidy2012025.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://aharidy.online/aharidy101125.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://aharidy.online/aharidy40825.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+   <url>
+    <loc>https://aharidy.online/aharidy2625.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>
