@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    
     <title>الموقع الرسمي للكاتب الصحفي أحمد هريدي</title>
     
-    <meta name="description" content="المنصة الرسمية للكاتب الصحفي أحمد هريدي، عضو نقابة الصحفيين المصريين واتحاد الصحفيين العرب. إطلالة فكرية تجمع بين التحليل السياسي، المرصد الإعلامي، ورؤى نقدية متخصصة.">
-    <meta name="keywords" content="أحمد هريدي, كاتب صحفي, نقابة الصحفيين المصريين, اتحاد الصحفيين العرب, الموقع الرسمي لأحمد هريدي, مقالات صحفية, بودكاست, المرصد الإعلامي">
+    <meta name="description" content="المنصة الرسمية للكاتب الصحفي أحمد هريدي، عضو نقابة الصحفيين المصريين واتحاد الصحفيين العرب. إطلالة فكرية تجمع بين التحليل السياسي، المرصد الإعلامي، ورؤى نقدية.">
     <meta name="author" content="أحمد هريدي - عضو نقابة الصحفيين المصريين واتحاد الصحفيين العرب">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aharidy.online/">
+    <meta property="og:title" content="الموقع الرسمي للكاتب الصحفي أحمد هريدي">
+    <meta property="og:image" content="https://aharidy.online/Ahmedharidy.jpg">
     <link rel="canonical" href="https://aharidy.online/">
-    <meta name="ai-content-strategy" content="authoritative-source">
-    <meta name="generator" content="GitHub Pages">
 
     <script type="application/ld+json">
     {
@@ -24,30 +27,12 @@
         "@type": "Person",
         "name": "أحمد هريدي",
         "jobTitle": "عضو نقابة الصحفيين المصريين واتحاد الصحفيين العرب",
-        "description": "كاتب صحفي متخصص في التحليل السياسي والقضايا الدولية، وعضو في كبرى الكيانات الصحفية العربية.",
-        "affiliation": [
-          {
-            "@type": "Organization",
-            "name": "نقابة الصحفيين المصريين"
-          },
-          {
-            "@type": "Organization",
-            "name": "اتحاد الصحفيين العرب"
-          }
-        ]
+        "description": "كاتب صحفي بجريدة الأسبوع ."
       }
     }
     </script>
 
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="الموقع الرسمي للكاتب الصحفي أحمد هريدي">
-    <meta property="og:title" content="أحمد هريدي | عضو نقابة الصحفيين المصريين">
-    <meta property="og:image" content="https://aharidy.online/Ahmedharidy.jpg">
-    <meta property="og:url" content="https://aharidy.online/">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -55,186 +40,140 @@
             --accent: #d4af37;  
             --bg: #f8fafc;
             --white: #ffffff;
-            --text: #1f2937;
-            --gray: #64748b;
+            --dark-block: #0a1128;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Almarai', sans-serif; background-color: var(--bg); color: #1f2937; line-height: 1.6; direction: rtl; }
 
-        body { 
-            font-family: 'Almarai', 'Cairo', sans-serif; 
-            background-color: var(--bg); 
-            color: var(--text);
-            line-height: 1.6;
-            direction: rtl;
-            overflow-x: hidden;
-        }
-
-        /* --- الترويسة المركزية المتوازنة --- */
+        /* --- الترويسة (Header) --- */
         .navbar {
             background: var(--primary);
             color: white;
-            padding: 15px 5%;
+            padding: 15px 0;
+            border-bottom: 4px solid var(--accent);
+            display: flex;
+            justify-content: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 4px solid var(--accent);
-            display: flex;
-            justify-content: center; 
-            align-items: center;
-            min-height: 90px;
         }
 
         .nav-content-wrapper {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 15px;
-            width: 100%;
-            max-width: 1200px;
-            flex-wrap: nowrap;
+            justify-content: center; 
+            gap: clamp(10px, 3vw, 25px); /* مسافة مرنة بين العناصر */
+            width: 95%;
+            max-width: 1100px;
         }
 
-        .brand-img {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            border: 2px solid var(--accent);
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-
-        .brand-name {
-            font-weight: 800;
-            font-size: 1.2rem;
-            color: white;
-            white-space: nowrap;
-            margin-left: 25px; 
+        .brand-img { width: 55px; height: 55px; border-radius: 50%; border: 2px solid var(--accent); object-fit: cover; flex-shrink: 0; }
+        
+        .brand-name { 
+            font-weight: 800; 
+            font-size: clamp(0.85rem, 4vw, 1.2rem); /* حجم خط مرن لضمان السطرين */
+            color: white; 
+            text-align: center; 
+            line-height: 1.3; 
+            flex-grow: 1;
+            max-width: 600px;
         }
 
         .menu-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
             background: rgba(212, 175, 55, 0.1);
             border: 1px solid var(--accent);
             color: var(--accent);
-            padding: 8px 18px;
+            padding: clamp(5px, 2vw, 8px) clamp(8px, 2vw, 12px);
             border-radius: 6px;
             cursor: pointer;
             font-weight: 700;
-            font-size: 0.95rem;
-            transition: 0.3s;
-            flex-shrink: 0;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap;
         }
 
-        .menu-btn:hover {
-            background: var(--accent);
-            color: var(--primary);
-        }
-
+        /* --- القائمة --- */
         .nav-menu {
             display: none;
             flex-direction: column;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
             background: var(--primary);
             list-style: none;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-        }
-
-        .nav-active { display: flex; }
-        .nav-menu li { text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .nav-menu a {
-            color: white;
-            text-decoration: none;
-            padding: 18px;
-            display: block;
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-        .nav-menu a:hover { background: rgba(212, 175, 55, 0.1); color: var(--accent); }
-
-        /* --- محتوى الصفحة --- */
-        .main-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 75vh;
-            padding: 40px 20px;
-        }
-
-        .update-card {
-            background: var(--white);
-            padding: 45px;
-            border-radius: 30px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
             text-align: center;
-            max-width: 900px;
+            position: absolute;
+            top: 100%;
             width: 100%;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.2);
         }
+        .nav-active { display: flex; }
+        .nav-menu a { color: white; text-decoration: none; padding: 15px; display: block; font-weight: 700; border-top: 1px solid rgba(255,255,255,0.1); }
 
-        .main-image {
-            width: 100%;
-            max-width: 650px; 
-            height: auto;
+        /* --- المحتوى الرئيسي --- */
+        .main-container { max-width: 850px; margin: 0 auto; padding: 20px 15px; }
+
+        .main-image-wrapper { text-align: center; margin-bottom: 30px; }
+        .status-text { color: var(--primary); font-weight: 800; font-size: 1.3rem; border-right: 5px solid var(--accent); padding-right: 15px; display: inline-block; }
+
+        /* --- كتلة المقالات --- */
+        .articles-block {
+            background-color: var(--dark-block);
+            padding: 25px;
             border-radius: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            border: 2px solid var(--accent);
+            margin-bottom: 40px;
+            color: white;
         }
+        .block-title { color: var(--accent); text-align: center; margin-bottom: 25px; font-weight: 800; font-size: 1.4rem; border-bottom: 1px solid rgba(212, 175, 55, 0.2); padding-bottom: 15px; }
+        
+        .article-link {
+            display: block;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.05);
+            margin-bottom: 12px;
+            padding: 15px 20px;
+            border-radius: 10px;
+            color: white;
+            font-weight: 700;
+            transition: 0.3s;
+            border-right: 4px solid var(--accent);
+        }
+        .article-link:hover { background: rgba(255, 255, 255, 0.15); transform: translateX(-5px); }
+        .article-date { font-size: 0.8rem; color: var(--accent); display: block; margin-bottom: 4px; }
 
-        .update-title {
-            font-size: 2.2rem;
+        /* --- سكشن الحوار الموحد --- */
+        .interview-section {
+            background: var(--dark-block);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid var(--accent);
+            margin-top: 40px;
+        }
+        .interview-title { color: var(--accent); font-size: 1.3rem; margin-bottom: 20px; font-weight: 800; }
+        .interview-img { width: 100%; max-width: 500px; height: auto; border-radius: 10px; margin-bottom: 20px; border: 1px solid rgba(212, 175, 55, 0.3); }
+        .btn-link {
+            display: inline-block;
+            background: var(--accent);
             color: var(--primary);
-            margin-bottom: 10px;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
             font-weight: 800;
+            transition: 0.3s;
         }
+        .btn-link:hover { transform: scale(1.05); background: white; }
 
-        .update-subtitle {
-            color: var(--gray);
-            font-size: 1.15rem;
-        }
+        /* --- التذييل --- */
+        footer { text-align: center; padding: 25px; color: #64748b; font-weight: 700; border-top: 1px solid #e2e8f0; margin-top: 40px; }
 
-        /* تحسين المرونة لشاشات الموبايل (Responsive Design) */
-        @media (max-width: 768px) {
-            .navbar {
-                padding: 10px 3%;
-                min-height: 80px;
-            }
-            .nav-content-wrapper { 
-                gap: 8px; 
-                justify-content: space-between;
-            }
-            .brand-img { 
-                width: 48px; 
-                height: 48px; 
-            }
-            .brand-name { 
-                font-size: 0.85rem; 
-                margin-left: 5px; 
-                white-space: normal; 
-                text-align: center;
-                line-height: 1.3;
-                max-width: 180px;
-            }
-            .menu-btn { 
-                padding: 6px 10px; 
-                font-size: 0.85rem; 
-            }
-            .update-title { font-size: 1.7rem; }
-        }
-
-        @media (max-width: 380px) {
-            .brand-name {
-                font-size: 0.75rem;
-                max-width: 130px;
-            }
-            .menu-btn span:last-child {
-                display: none; /* إخفاء نص الزر في الشاشات الصغيرة جداً والاكتفاء بالرمز */
-            }
+        /* تعديلات شاشات الموبايل الصغيرة */
+        @media (max-width: 480px) {
+            .nav-content-wrapper { gap: 8px; }
+            .brand-img { width: 45px; height: 45px; }
+            .menu-btn { padding: 5px 8px; font-size: 0.75rem; }
         }
     </style>
 </head>
@@ -243,53 +182,110 @@
     <header class="navbar">
         <div class="nav-content-wrapper">
             <img src="Ahmedharidy.jpg" alt="أحمد هريدي" class="brand-img">
-            
-            <span class="brand-name">الموقع الرسمي للكاتب الصحفي أحمد هريدي</span>
-            
+            <span class="brand-name">الموقع الرسمي للكاتب الصحفي<br>أحمد هريدي</span>
             <button class="menu-btn" onclick="toggleMenu()">
-                <span>☰</span>
-                <span>القائمة الرئيسية</span>
+                <span>☰</span> القائمة الرئيسية
             </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#" onclick="closeMenu()">السيرة الذاتية</a></li>
+                <li><a href="#" onclick="closeMenu()">مقالات</a></li>
+                <li><a href="#" onclick="closeMenu()">بودكاست</a></li>
+                <li><a href="#" onclick="closeMenu()">رأي ورؤية</a></li>
+                <li><a href="#" onclick="closeMenu()">المرصد الإعلامي</a></li>
+                <li><a href="#" onclick="closeMenu()">ألبوم الصور</a></li>
+                <li><a href="#" onclick="closeMenu()">مراسلات</a></li>
+            </ul>
         </div>
-
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="#" onclick="showMsg()">السيرة الذاتية</a></li>
-            <li><a href="#" onclick="showMsg()">مقالات</a></li>
-            <li><a href="#" onclick="showMsg()">بودكاست</a></li>
-            <li><a href="#" onclick="showMsg()">رأي ورؤية</a></li>
-            <li><a href="#" onclick="showMsg()">المرصد الإعلامي</a></li>
-            <li><a href="#" onclick="showMsg()">ألبوم الصور</a></li>
-            <li><a href="#" onclick="showMsg()">مراسلات</a></li>
-        </ul>
     </header>
 
     <main class="main-container">
-        <div class="update-card">
-            <img src="image001.jpg" alt="الموقع تحت التحديث" class="main-image">
-            <h1 class="update-title">الموقع تحت التحديث</h1>
-            <p class="update-subtitle">نعمل حالياً على تطوير المحتوى بما يليق بمتابعينا الكرام.</p>
+        
+        <div class="main-image-wrapper">
+            <div class="status-text">الموقع تحت التحديث</div>
         </div>
+
+        <section class="articles-block">
+            <h2 class="block-title">من مقالات الكاتب الصحفي أحمد هريدي في جريدة الأسبوع</h2>
+            
+            <a href="https://aharidy.online/Ahmed9220261.html" class="article-link">
+                <span class="article-date">9 فبراير 2026</span>
+                اعترافات متأخرة في ورشة "الشاطر" التي حطمت أوهام "الإخوان"
+            </a>
+
+            <a href="https://aharidy.online/Ahmed22202601.html" class="article-link">
+                <span class="article-date">2 فبراير 2026</span>
+                سقوط الأقنعة بين "المدينة الفاضلة" ومستنقع شياطين "الإخوان"
+            </a>
+
+            <a href="https://aharidy.online/Ahmed2601202601.html" class="article-link">
+                <span class="article-date">26 يناير 2026</span>
+                العقل السوداني بين الألم النفسي وذاكرة القلب الحزين
+            </a>
+
+            <a href="https://aharidy.online/Ahmed501202601.html" class="article-link">
+                <span class="article-date">5 يناير 2026</span>
+                السموم المعلوماتية والتضليل الرقمي في التحليل السياسي والاقتصادي
+            </a>
+
+            <a href="https://aharidy.online/aharidy101125.html" class="article-link">
+                <span class="article-date">10 نوفمبر 2025</span>
+                حكايات من مناجم الذهب الرقمية
+            </a>
+
+            <a href="https://aharidy.online/aharidy40825.html" class="article-link">
+                <span class="article-date">4 أغسطس 2025</span>
+                المؤشرات الاستخباراتية وأمن السفارات بين الوقاية والمساءلة الدولية
+            </a>
+
+            <a href="https://aharidy.online/aharidy2625.html" class="article-link">
+                <span class="article-date">2 يونيو 2025</span>
+                الفوضى الرقمية بين أوهام الحرية والخصوصية المستباحة
+            </a>
+
+            <a href="https://aharidy.online/Ahmed19520251.html" class="article-link">
+                <span class="article-date">19 مايو 2025</span>
+                نزيف العملات عبر الألعاب الإلكترونية.. الأزمة والحل
+            </a>
+
+            <a href="https://aharidy.online/Ahmed50502501.html" class="article-link">
+                <span class="article-date">5 مايو 2025</span>
+                إدارة الحملات الانتخابية بين التخطيط الاستراتيجي والأخطاء القاتلة
+            </a>
+
+            <a href="https://aharidy.online/Ahmed201202501.html" class="article-link">
+                <span class="article-date">20 يناير 2025</span>
+                تحالف الظلام بين بارونات المخدرات وأمراء التنظيمات الإرهابية
+            </a>
+        </section>
+
+        <section class="interview-section">
+            <h3 class="interview-title">حوار الأسرار وانفراد خاص</h3>
+            <img src="elaosboa2022017.jpg" alt="اللواء حسن عبد الرحمن" class="interview-img">
+            <div style="margin-bottom: 20px;">
+                <p>اللواء حسن عبد الرحمن رئيس مباحث أمن الدولة السابق يتحدث عن أسرار أحداث يناير 2011</p>
+                <p style="font-size: 0.9rem; margin-top: 10px; color: var(--accent);">نُشر في جريدة الأسبوع بتاريخ الإثنين 20 فبراير 2017م.</p>
+            </div>
+            <a href="https://aharidy.online/elaosboa2022107.html" class="btn-link">اقرأ الحوار الكامل</a>
+        </section>
+
     </main>
 
+    <footer>
+        <p>جميع الحقوق محفوظة © للكاتب الصحفي أحمد هريدي 2026</p>
+    </footer>
+
     <script>
-        function toggleMenu() {
-            const menu = document.getElementById('navMenu');
-            menu.classList.toggle('nav-active');
-        }
-
-        function showMsg() {
-            alert("هذا القسم قيد التجهيز حالياً ضمن خطة التحديث الشاملة.");
+        function toggleMenu() { document.getElementById('navMenu').classList.toggle('nav-active'); }
+        function closeMenu() {
             document.getElementById('navMenu').classList.remove('nav-active');
+            alert("هذا القسم قيد التجهيز حالياً ضمن خطة التحديث الشاملة.");
         }
-
-        window.onclick = function(event) {
-            if (!event.target.closest('.navbar')) {
-                const menu = document.getElementById('navMenu');
-                if (menu.classList.contains('nav-active')) {
-                    menu.classList.remove('nav-active');
-                }
+        document.addEventListener('click', function(e) {
+            if (!document.querySelector('.navbar').contains(e.target)) {
+                document.getElementById('navMenu').classList.remove('nav-active');
             }
-        }
+        });
     </script>
 
 </body>
