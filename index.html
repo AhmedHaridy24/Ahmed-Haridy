@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>الموقع الرسمي للكاتب الصحفي أحمد هريدي</title>
     
-    <meta name="description" content="المنصة الرسمية للكاتب الصحفي أحمد هريدي، عضو نقابة الصحفيين المصريين واتحاد الصحفيين العرب. إطلالة فكرية تجمع بين التحليل السياسي، المرصد الإعلامي، ورؤى نقدية.">
+    <meta name="description" content="المنصة الرسمية للكاتب الصحفي أحمد هريدي، عضو نقابة الصحفيين المصريين واتحاد الصحفيين العرب. إطلالة فكرية تجمع بين التحليل السياسي، الرصد الإعلامي، ورؤى نقدية.">
     <meta name="author" content="أحمد هريدي - عضو نقابة الصحفيين المصريين واتحاد الصحفيين العرب">
     
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -63,7 +63,7 @@
             display: flex;
             align-items: center;
             justify-content: center; 
-            gap: clamp(10px, 3vw, 25px); /* مسافة مرنة بين العناصر */
+            gap: clamp(10px, 3vw, 25px);
             width: 95%;
             max-width: 1100px;
         }
@@ -72,7 +72,7 @@
         
         .brand-name { 
             font-weight: 800; 
-            font-size: clamp(0.85rem, 4vw, 1.2rem); /* حجم خط مرن لضمان السطرين */
+            font-size: clamp(0.85rem, 4vw, 1.2rem); 
             color: white; 
             text-align: center; 
             line-height: 1.3; 
@@ -113,10 +113,26 @@
         /* --- المحتوى الرئيسي --- */
         .main-container { max-width: 850px; margin: 0 auto; padding: 20px 15px; }
 
-        .main-image-wrapper { text-align: center; margin-bottom: 30px; }
+        /* سكشن المقال الرئيسي المميز */
+        .featured-article {
+            background-color: var(--dark-block);
+            padding: 30px;
+            border-radius: 20px;
+            border: 2px solid var(--accent);
+            margin-bottom: 40px;
+            color: white;
+            text-align: center;
+        }
+        .featured-meta { color: var(--accent); font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; display: block; }
+        .featured-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; line-height: 1.4; color: white; }
+        .featured-img { width: 100%; max-width: 600px; height: auto; border-radius: 15px; margin-bottom: 20px; border: 1px solid rgba(212, 175, 55, 0.3); }
+        .featured-excerpt { text-align: justify; font-size: 1.05rem; line-height: 1.8; margin-bottom: 25px; color: #e2e8f0; }
+
+        /* حالة التحديث */
+        .status-container { text-align: center; margin: 30px 0; }
         .status-text { color: var(--primary); font-weight: 800; font-size: 1.3rem; border-right: 5px solid var(--accent); padding-right: 15px; display: inline-block; }
 
-        /* --- كتلة المقالات --- */
+        /* كتل المقالات الروابط */
         .articles-block {
             background-color: var(--dark-block);
             padding: 25px;
@@ -142,7 +158,7 @@
         .article-link:hover { background: rgba(255, 255, 255, 0.15); transform: translateX(-5px); }
         .article-date { font-size: 0.8rem; color: var(--accent); display: block; margin-bottom: 4px; }
 
-        /* --- سكشن الحوار الموحد --- */
+        /* سكشن الحوار الموحد */
         .interview-section {
             background: var(--dark-block);
             color: white;
@@ -154,6 +170,7 @@
         }
         .interview-title { color: var(--accent); font-size: 1.3rem; margin-bottom: 20px; font-weight: 800; }
         .interview-img { width: 100%; max-width: 500px; height: auto; border-radius: 10px; margin-bottom: 20px; border: 1px solid rgba(212, 175, 55, 0.3); }
+        
         .btn-link {
             display: inline-block;
             background: var(--accent);
@@ -166,14 +183,13 @@
         }
         .btn-link:hover { transform: scale(1.05); background: white; }
 
-        /* --- التذييل --- */
+        /* التذييل */
         footer { text-align: center; padding: 25px; color: #64748b; font-weight: 700; border-top: 1px solid #e2e8f0; margin-top: 40px; }
 
-        /* تعديلات شاشات الموبايل الصغيرة */
         @media (max-width: 480px) {
             .nav-content-wrapper { gap: 8px; }
             .brand-img { width: 45px; height: 45px; }
-            .menu-btn { padding: 5px 8px; font-size: 0.75rem; }
+            .featured-title { font-size: 1.25rem; }
         }
     </style>
 </head>
@@ -201,9 +217,15 @@
 
     <main class="main-container">
         
-        <div class="main-image-wrapper">
-            <div class="status-text">الموقع تحت التحديث</div>
-        </div>
+        <section class="featured-article">
+            <span class="featured-meta">أحمد هريدي يكتب عن:</span>
+            <h1 class="featured-title">العقل السوداني بين الألم النفسي وذاكرة القلب الحزين</h1>
+            <img src="elaosboa580209.jpg" alt="العقل السوداني" class="featured-img">
+            <p class="featured-excerpt">
+                في الحروب، لا يأتي الخطر دائمًا من قصف أعمى متكرر، أو طلقات رصاص لا تُفرّق بين طفل رضيع وكهل قعيد، أحيانًا يتخفّى الخطر في الصمت الذي يعقب الانفجار، وفي الهدوء الذي يخيّم بعد الفوضى، وفي ذلك الفراغ الذي يستقر داخل الإنسان عندما ينجو جسده بينما تبقى نفسه ملتصقة بآلام القهر. عندما تختلط الحرب بالحياة اليومية حتى يفقد الإنسان القدرة على الفصل بينهما، لا تتوقف المعاناة عند القتل والدمار والنزوح، هناك مواجهة أخرى، أعمق وأطول أمدًا، تدور داخل العقول، في الذاكرة، وفي الجسد الذي يواصل التصرّف وكأن التهديد لم ولن يغادر المكان.
+            </p>
+            <a href="https://aharidy.online/Ahmed2601202601.html" class="btn-link">اقرأ المقال كاملًا</a>
+        </section>
 
         <section class="articles-block">
             <h2 class="block-title">من مقالات الكاتب الصحفي أحمد هريدي في جريدة الأسبوع</h2>
@@ -259,6 +281,10 @@
             </a>
         </section>
 
+        <div class="status-container">
+            <div class="status-text">الموقع تحت التحديث</div>
+        </div>
+
         <section class="interview-section">
             <h3 class="interview-title">حوار الأسرار وانفراد خاص</h3>
             <img src="elaosboa2022017.jpg" alt="اللواء حسن عبد الرحمن" class="interview-img">
@@ -272,7 +298,7 @@
     </main>
 
     <footer>
-        <p>جميع الحقوق محفوظة © للكاتب الصحفي أحمد هريدي 2026</p>
+        <p>جميع الحقوق محفوظة © الكاتب الصحفي أحمد هريدي 2026</p>
     </footer>
 
     <script>
