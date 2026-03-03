@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <title>مراسلات | أحمد هريدي</title>
+    
+    <meta name="author" content="أحمد هريدي - عضو نقابة الصحفيين واتحاد الصحفيين العرب">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0a1128; 
+            --accent: #d4af37;  
+            --bg: #f8fafc;
+            --white: #ffffff;
+            --text: #1f2937;
+            --gray: #64748b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            font-family: 'Almarai', 'Cairo', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--text);
+            line-height: 1.8;
+            direction: rtl;
+        }
+
+        /* --- الترويسة الذهبية المعتمدة --- */
+        .navbar {
+            background: var(--primary);
+            color: white;
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 4px solid var(--accent);
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            min-height: 90px;
+        }
+
+        .nav-content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .brand-img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 2px solid var(--accent);
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .brand-name {
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: white;
+            white-space: nowrap;
+            margin-left: 20px; 
+        }
+
+        .menu-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 8px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .nav-menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--primary);
+            list-style: none;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .nav-active { display: flex; }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            font-weight: 700;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* --- محتوى صفحة المراسلات --- */
+        .contact-container {
+            max-width: 800px;
+            margin: 60px auto;
+            background: var(--white);
+            padding: 50px 30px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+        }
+
+        .contact-title {
+            font-family: 'Cairo', sans-serif;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 4.5rem; /* مسافة تعادل 3 أسطر */
+            font-weight: 900;
+        }
+
+        .contact-desc {
+            color: var(--gray);
+            font-size: 1.15rem;
+            margin-bottom: 45px;
+            line-height: 1.6;
+        }
+
+        /* زر المراسلة الذهبي */
+        .email-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--primary), #1a2a4d);
+            color: white !important;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.25rem;
+            transition: 0.3s;
+            border: 2px solid var(--accent);
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(10, 17, 40, 0.2);
+        }
+
+        .email-btn:hover {
+            transform: translateY(-5px);
+            background: var(--accent);
+            color: var(--primary) !important;
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .back-home { margin-top: 50px; }
+        .btn-home {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .brand-name { font-size: 0.8rem; white-space: normal; }
+            .contact-container { margin: 20px; padding: 35px 20px; }
+            .contact-title { font-size: 1.8rem; margin-bottom: 3rem; }
+            .email-btn { padding: 15px 25px; font-size: 1.1rem; width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-content-wrapper">
+            <img src="Ahmedharidy.jpg" alt="أحمد هريدي" class="brand-img">
+            <span class="brand-name">الموقع الرسمي للكاتب الصحفي أحمد هريدي</span>
+            <button class="menu-btn" onclick="toggleMenu()">
+                <span>☰</span>
+                <span>القائمة الرئيسية</span>
+            </button>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="#" onclick="showMsg()">السيرة الذاتية</a></li>
+            <li><a href="#" onclick="showMsg()">مقالات</a></li>
+            <li><a href="#" onclick="showMsg()">بودكاست</a></li>
+            <li><a href="#" onclick="showMsg()">رأي ورؤية</a></li>
+            <li><a href="#" onclick="showMsg()">المرصد الإعلامي</a></li>
+            <li><a href="#" onclick="showMsg()">ألبوم الصور</a></li>
+            <li><a href="contact.html">مراسلات</a></li>
+        </ul>
+    </header>
+
+    <main class="contact-container">
+        <h1 class="contact-title">تواصل معنا</h1>
+        
+        <p class="contact-desc">
+            يسعدنا استقبال رسائلكم مباشرة عبر البريد الإلكتروني.<br>
+            عند الضغط على الزر، سيفتح لك تطبيق البريد المفضل لديك لإرسال رسالتك بأمان.
+        </p>
+
+        <a href="javascript:void(0);" onclick="sendMail();" class="email-btn" rel="nofollow">
+            <span>✉️</span>
+            <span>راسلنا </span>
+        </a>
+
+        <div class="back-home">
+            <a href="index.html" class="btn-home">العودة للصفحة الرئيسية</a>
+        </div>
+    </main>
+
+    <script>
+        // دالة فك التشفير وفتح البريد (تحمي الإيميل من عناكب البحث)
+        function sendMail() {
+            // كود Base64 المشفر لـ ahmedharidy1@proton.me
+            var encodedEmail = "YWhtZWRoYXJpZHkxQHByb3Rvbi5tZQ=="; 
+            var email = atob(encodedEmail);
+            
+            // فتح تطبيق البريد الافتراضي
+            window.location.href = "mailto:" + email + "?subject=تواصل من الموقع الرسمي للكاتب أحمد هريدي";
+        }
+
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('nav-active');
+        }
+        
+        function showMsg() {
+            alert("هذا القسم قيد التجهيز حالياً.");
+            document.getElementById('navMenu').classList.remove('nav-active');
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.closest('.navbar')) {
+                const menu = document.getElementById('navMenu');
+                if (menu && menu.classList.contains('nav-active')) {
+                    menu.classList.remove('nav-active');
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
